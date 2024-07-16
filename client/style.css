@@ -1,0 +1,85 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(250, 250, 255);
+
+}
+.square-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.square-radio .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.square-radio:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.square-radio input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.square-radio .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.square-radio input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.square-radio .checkmark:after {
+    left: 32%;
+    top: 10%;
+    width: 35%;
+    height: 70%;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+.button-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgb(250, 250, 255);
+    padding : 1rem;
+    
+}
+
+#loadPdf{
+    outline: 0;
+    border: 0;
+    padding : 0.5rem 1rem;
+    background-color: rgb(96, 96, 200);
+    border-radius: 1rem;
+    color : white;
+}
+
+#savePdf {
+    outline: 0;
+    border: 0;
+    padding : 0.5rem 1rem;
+    background-color: rgb(53, 184, 53);
+    border-radius: 1rem;
+    color : white;
+}
